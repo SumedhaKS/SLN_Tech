@@ -1,0 +1,8 @@
+{
+    "appId" : "com.sln.tech",
+    "files" : ["dist-electron", "dist-react"],
+    "mac" : {
+        "target": "dmg"
+    }
+
+}
