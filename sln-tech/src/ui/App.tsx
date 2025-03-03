@@ -3,10 +3,16 @@ import './App.css'
 function App() {
   
 
+
   return (
     <div>
       <div>
-        <h2 class="text-3xl font-bold underline">Let's get started</h2>
+        Welcome to SLN Tech!
+      </div>
+      <div>
+        <div>
+          
+        </div>
       </div>
     </div>
   )
