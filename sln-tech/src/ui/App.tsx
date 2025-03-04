@@ -1,18 +1,17 @@
 import './App.css'
+import HomePage from './components/HomePage'
 
 function App() {
   
-
-
   return (
     <div>
-      <div>
-        Welcome to SLN Tech!
+      <div >
+        SLN Tech
       </div>
+
       <div>
-        <div>
-          
-        </div>
+        <HomePage></HomePage>
+
       </div>
     </div>
   )

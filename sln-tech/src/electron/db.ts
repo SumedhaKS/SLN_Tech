@@ -2,7 +2,7 @@ import { Client } from "pg";
 
 const client = new Client({ connectionString: "" })
 
-async function createTables() {
+export async function createTables() {
     await client.connect();
     const result1 = await client.query(`CREATE TABLE customer(
             id SERIAL PRIMARY KEY,
@@ -25,6 +25,3 @@ async function createTables() {
 
     console.log(result1, '\n', result2, '\n', result3)
 }
-
-
-
