@@ -1,0 +1,23 @@
+Table creation -
+
+const res = await client.query(`CREATE TABLE customer(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(50) UNIQUE,
+    phNo VARCHAR(15) UNIQUE NOT NULL,
+    address TEXT NOT NULL,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );`)
+
+const res = await client.query(`CREATE TABLE service(
+    id SERIAL PRIMARY KEY,
+    customer_ID INT REFERENCES customer(id) ON DELETE CASCADE,
+    model VARCHAR(50) NOT NULL,
+    make VARCHAR(50) NOT NULL,
+    serial_no VARCHAR(20) UNIQUE,
+    issue_description TEXT NOT NULL,
+    status VARCHAR(15) DEFAULT 'pending',
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );`)
+
+and -> ` ALTER SEQUENCE customer_id_seq RESTART 1000; `
